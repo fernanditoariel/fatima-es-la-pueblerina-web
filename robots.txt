@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fatima-es-la-pueblerina-web.vercel.app/sitemap.xml
