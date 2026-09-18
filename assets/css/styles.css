@@ -480,28 +480,28 @@ p{ margin: 0; }
   .feature-grid{ grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ---------- Full-bleed photo bands ---------- */
+/* ---------- Showcase (foto contenida) ---------- */
 
-.band{
+.feature-strip{ padding-bottom: clamp(40px, 4vw, 64px); }
+
+.showcase{ padding-bottom: clamp(64px, 6vw + 24px, 104px); }
+.showcase__frame{
   margin: 0;
-  line-height: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 30px 60px -32px rgba(58,42,36,0.38);
 }
-.band img{
+.showcase__frame img{
   width: 100%;
-  height: clamp(240px, 46vw, 600px);
+  height: auto;
+  aspect-ratio: 21 / 9;
   object-fit: cover;
   object-position: 50% 50%;
 }
 
-.band--split{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-}
-.band--split img{ height: clamp(220px, 34vw, 420px); }
-
 @media (max-width: 640px){
-  .band--split{ grid-template-columns: 1fr; }
+  .showcase__frame{ border-radius: var(--radius-soft); }
+  .showcase__frame img{ aspect-ratio: 4 / 3; }
 }
 
 /* ---------- Nuestros productos ---------- */
