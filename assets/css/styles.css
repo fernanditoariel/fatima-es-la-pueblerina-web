@@ -703,10 +703,47 @@ p{ margin: 0; }
   position: relative;
 }
 
+.historia__layout{
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(36px, 6vw, 88px);
+  align-items: center;
+}
+
+.historia__photo{
+  position: relative;
+  margin: 0;
+  width: 100%;
+  max-width: 420px;
+  justify-self: center;
+}
+.historia__photo::before{
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border: 2px solid rgba(246,196,214,0.55);
+  border-radius: var(--radius-lg);
+}
+.historia__photo img{
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 55% 30%;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 48px -24px rgba(41,22,26,0.55);
+}
+
 .historia__wrap{
-  max-width: 760px;
-  margin-inline: auto;
+  max-width: 640px;
   text-align: left;
+}
+
+@media (max-width: 900px){
+  .historia__layout{ grid-template-columns: 1fr; }
+  .historia__photo{ max-width: 320px; margin-bottom: 8px; }
+  .historia__photo::before{ inset: 14px -12px -14px 12px; }
 }
 
 .historia h2{
