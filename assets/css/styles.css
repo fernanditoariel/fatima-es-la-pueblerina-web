@@ -488,8 +488,9 @@ p{ margin: 0; }
 }
 .band img{
   width: 100%;
-  height: clamp(260px, 42vw, 520px);
+  height: clamp(240px, 46vw, 600px);
   object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .band--split{
